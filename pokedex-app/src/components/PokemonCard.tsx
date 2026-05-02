@@ -1,0 +1,17 @@
+import type { PokemonListItem } from "../types/pokemon";
+import { Link } from "react-router-dom"
+
+
+interface Props {
+    pokemon: PokemonListItem
+}
+
+export default function PokemonCard({ pokemon }: Props): JSX.Element {
+    return (
+        <div style={{ border: "1px solid #ccc", padding: "10px"}}>
+            <Link to={`/pokemon/${pokemon.name}`}>
+                <h3>{pokemon.name}</h3>
+            </Link>
+        </div>
+    )
+}
