@@ -1,5 +1,6 @@
 import type { PokemonListItem } from "../types/pokemon";
 import { Link } from "react-router-dom"
+import type { JSX } from "react";
 
 
 interface Props {

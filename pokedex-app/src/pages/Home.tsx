@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { PokemonListItem } from "../types/pokemon";
 import { getPokemonList } from "../services/api";
 import PokemonCard from "../components/PokemonCard";
+import type { JSX } from "react";
 
 
 export default function Home(): JSX.Element {

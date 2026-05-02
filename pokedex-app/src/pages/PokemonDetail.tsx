@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getPokemon } from "../services/api";
 import { useParams } from "react-router-dom";
 import type { Pokemon } from "../types/pokemon";
+import type { JSX } from "react";
 
 
 export default function PokemonDetail(): JSX.Element {
