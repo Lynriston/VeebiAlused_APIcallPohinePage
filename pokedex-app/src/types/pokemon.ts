@@ -3,6 +3,25 @@ export interface PokemonListItem {
     url: string;
 }
 
+export interface PokemonType {
+    type: {
+        name:string;
+    };
+}
+
+export interface PokemonAbility {
+    ability: {
+        name:string;
+    };
+}
+
+export interface PokemonStat {
+    base_stat: number;
+    stat: {
+        name: string;
+    };
+}
+
 export interface Pokemon {
     name: string;
     height: number;
@@ -10,4 +29,7 @@ export interface Pokemon {
     sprites: {
         front_default: string;
     }
+    types: PokemonType[];
+    abilities: PokemonAbility[];
+    stats: PokemonStat[];
 }
