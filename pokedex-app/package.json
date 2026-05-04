@@ -1,9 +1,11 @@
 {
   "name": "pokedex-app",
+  "homepage": "https://lynriston.github.io/VeebiAlused_APIcallPohinePage/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -15,6 +17,7 @@
     "@mui/material": "^9.0.0",
     "@types/axios": "^0.9.36",
     "axios": "^1.15.2",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-router-dom": "^7.14.2"
