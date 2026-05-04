@@ -8,6 +8,12 @@ export function isFavorite(name: string): boolean {
     return getFavorites().includes(name);
 }
 
+export function removeFavorite(name: string): void {
+    const current = getFavorites();
+    const updated = current.filter((f) => f !== name);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+}
+
 export function toggleFavorite(name: string): string[] {
     const current = getFavorites();
 
