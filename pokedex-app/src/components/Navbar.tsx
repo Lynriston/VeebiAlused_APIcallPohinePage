@@ -1,12 +1,26 @@
 import { Link } from "react-router-dom"
-import type { JSX } from "react";
+import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 
+// Navbar funktsioon
+export default function Navbar() {
+  return (
+    <AppBar position="static">
+      <Toolbar>
+        {/* //Pealkiri */}
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          Pokédex
+        </Typography>
 
-export default function Navbar(): JSX.Element {
-    return (
-        <nav style={{ padding: "10px", display: "flex", gap: "10px"}}>
-            <Link to="/">Home</Link>
-            <Link to="/favorites">Favorites</Link>
-        </nav>
-    )
+        {/* //Nupp kodulehele */}
+        <Button color="inherit" component={Link} to="/">
+          Home
+        </Button>
+
+        {/* //Nupp lemmikutesse */}
+        <Button color="inherit" component={Link} to="/favorites">
+          Favorites
+        </Button>
+      </Toolbar>
+    </AppBar>
+  );
 }
